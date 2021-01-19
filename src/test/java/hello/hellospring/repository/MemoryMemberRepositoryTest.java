@@ -10,7 +10,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 
 class MemoryMemberRepositoryTest {
-    MemoryMemberRepository repository = new MemoryMemberRepository();
+     MemoryMemberRepository repository = new MemoryMemberRepository();
     
     @AfterEach //이 AfterEach가 callBack method라고 보면 됨. 메서드 하나 끝날때마다 실행이 됨. 어떤 동작을 함.
     public void afterEach(){//test가 하나 끝날때마다 메모리를 clear해줘야 함.
