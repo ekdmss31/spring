@@ -41,7 +41,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
     //구현이 끝났는데, 검증을 해야함. 제대로 동작을 하는지. 이 때 사용하는 것이 test case를 작성하는 것임.
 
-    public void clearStore(){ //store를 싹 비움.
+    public void clearStore(){  //store를 싹 비움.
         store.clear();
     }
 }
