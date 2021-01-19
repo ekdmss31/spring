@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"> <!--이것을 넣어주면 thymeleaf문법을 템플릿 엔진으로 사용할 수 있다.-->
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="'hello ' + ${name}" >hello! empty</p><!--이 p태그 안의 값이 이 템플릿 엔진으로 치환이 됨. 서버 없이 html을 만들 때 이 p태그 안의 값이 보이는 것임. -->
+</body>
+</html>
