@@ -26,7 +26,7 @@ public class HelloController {
     }
 
     //API
-    @GetMapping("hello-string")
+     @GetMapping("hello-string")
     @ResponseBody //html에 나오는 body테그x http 통신부에 body부가 있는데 body부에 이 데이터를 직접 넣어주겠다! 는 의미.
     public String helloString(@RequestParam("name") String name){
         return "hello " + name;//만약 name이 spring이면 hello spring이라고 띄움. 이 문자를 그냥 띄우는 것.
