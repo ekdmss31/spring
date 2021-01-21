@@ -1,4 +1,4 @@
-package hello.hellospring;
+package hello.hellospring; //컴포넌트로 등록이 되는 것은 이 패키지 하위 파일들만 @Service등 컴포넌트로 적용이 된다.
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

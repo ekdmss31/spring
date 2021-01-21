@@ -1,9 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+//1.@Repository
 //MemberRepository의 구현체 생성.
 public class MemoryMemberRepository implements MemberRepository{
 

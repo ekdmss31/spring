@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller //controller는 이것을 적어줘야 함.
 public class HelloController {
+    //이 controller라는 에노테이션을 보고 스프링이 뜰때 HelloController 객체를 생성해서 이 객체를 스프링이 들고있음. 이것을 컨테이너에서 스프링 빈이 관리된다라고 표현함.
 
     //Mep application에서 hello라고 들어오면 이 메서드를 호출해줌,
     @GetMapping("hello")
