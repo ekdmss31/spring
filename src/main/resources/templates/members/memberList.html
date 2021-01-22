@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--여기서는 thymeleaf가 본격적으로 동작하기 시작함.-->
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--each를 통해 루프를 돌면서 이 로직을 실행함. 회원이 늘때마다 총 회원 수만큼 반복해서 출력해줌.-->
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td><!--getId에 접근해서 가져옴-->
+                <td th:text="${member.name}"></td><!--getName에 접근해서 값을 가져아서 출력해줌-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
