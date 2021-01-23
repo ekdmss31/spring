@@ -44,6 +44,7 @@ class MemoryMemberRepositoryTest {
     //이름으로 찾기도 test 해봐야 함
     @Test
     public void findByName(){
+
         Member member1 = new Member();
         member1.setName("spring1");
         repository.save(member1);
@@ -54,11 +55,13 @@ class MemoryMemberRepositoryTest {
 
         Member result = repository.findByName("spring1").get();
         assertThat(result).isEqualTo(member1);
+
     }
 
     //findAll
     @Test
     public void findAll(){
+
         Member member1 = new Member();
         member1.setName("spring1");
         repository.save(member1);
@@ -70,6 +73,7 @@ class MemoryMemberRepositoryTest {
         List<Member> result = repository.findAll();
 
         assertThat(result.size()).isEqualTo(2);
+
     }
 
 }
