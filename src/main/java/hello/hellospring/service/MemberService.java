@@ -12,7 +12,6 @@ import java.util.Optional;
 //1.컴포넌트 스캔으로 스프링 빈 등록하기
 //@Service //이 코드를 넣어줘야 스프링이 알아챔. Service를 사용하면, 스프링이 올라올 때, 어? Service네? 하고 spring이 컨테이너에 멤버서비스를 등록해줌.
 public class MemberService {
-
     //private final MemberRepository memberRepository = new MemoryMemberRepository();//** 이것을 변경해줄것임. MemberServiceTest에서 같은 객체를 이용하기 위해서.
     private final MemberRepository memberRepository ;
 
@@ -46,14 +45,10 @@ public class MemberService {
 
     //전체 회원 조회
     public List<Member> findMembers(){
-
         return memberRepository.findAll();
-
     }
 
     public Optional<Member> findOne(Long memberId){
-
         return memberRepository.findById(memberId);
-
     }
 }
