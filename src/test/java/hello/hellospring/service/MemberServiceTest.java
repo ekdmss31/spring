@@ -12,8 +12,9 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
-class MemberServiceTest {
+//순수한 자바코드. --> 단위테스트. <-- 이게 더 좋을수도 있음. 단위테스트를 잘 만드는 것이 훨씬 더 좋은 테스트.
+//spring이용하는것 --> 통합테스트. spring 컨테이너를 이용한 test
+class MemberServiceTest {//순수한 java코드. spring을 이용하지 않았음.
 
     //MemberService memberService = new MemberService();
 

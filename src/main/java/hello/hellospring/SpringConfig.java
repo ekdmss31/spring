@@ -1,6 +1,7 @@
 package hello.hellospring;
 
 import hello.hellospring.repository.JdbcMemberRepository;
+import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.service.MemberService;
@@ -31,7 +32,9 @@ public class SpringConfig {
     public MemberRepository memberRepository() {
         //return new MemoryMemberRepository(); //MemberRepository는 인터페이스이기 때문에 구현체인 MemoryMemberRepository를 사용함.
         //19강
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        //21강 jdbc를 조립해줘야 함.
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
     //그러면 결국, Spring이 뜰 때, @Configuration에 의해 이 SpringConfig가 호출되어 MemberService와 MemberRepository가 스프링 빈 컨테이너에 들어가게 됨.
