@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -22,6 +23,7 @@ public class MemberServiceIntegrationTest {//spring을 이용해서 test만들�
     @Autowired MemberRepository memberRepository;
 
     @Test
+    @Commit //이 commit을 해주면 값이 db에 들어감
     void 회원가입() {//test는 한글로 바꿔도 됨.
         //given when then 문법.무엇인가 주어졌는데, 이것을 실행했을 때 이게 나와야 해. 라는 의미.
         //given
@@ -47,7 +49,6 @@ public class MemberServiceIntegrationTest {//spring을 이용해서 test만들�
 
         //when
         memberService.join(member1);
-
 
         //이것때문에 try catch넣기 애매하니까 이 문법을 이용함.
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));//이 예외(MemberService의 validateDuplicateMember)가 터져야 하고,
