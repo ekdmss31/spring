@@ -48,7 +48,7 @@ class MemoryMemberRepositoryTest {
         member1.setName("spring1");
         repository.save(member1);
 
-        Member member2 = new Member(); //이름이 같으면 shift+f6 누르면 rename가능
+        Member member2 = new Member(); // 이름이 같으면 shift+f6 누르면 rename가능
         member2.setName("spring2");
         repository.save(member2);
 
