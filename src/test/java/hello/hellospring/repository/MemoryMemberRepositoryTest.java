@@ -35,7 +35,7 @@ class MemoryMemberRepositoryTest {
         //Assertions.assertEquals(member,result); //(기대했던값, 실제값)
         //같으면 초록불이 뜨고, 다르면 빨간불이 뜸.
 
-        //요즘은 이 방법을 많이 사용함
+        // 요즘은 이 방법을 많이 사용함
         //Assertions.assertThat(member).isEqualTo(result);를 alt+enter하면 아래와 같이 변함
         assertThat(member).isEqualTo(result);
         //값이 다르면 빨간불, 같으면 초록불이 뜨게 함.

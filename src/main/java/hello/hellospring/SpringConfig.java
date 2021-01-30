@@ -10,16 +10,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfig {
 
-    //23강
+    // 23강
 
     private final MemberRepository memberRepository;
 
-    @Autowired //생성자가 하나인 경우에는 생략 가능
+    @Autowired // 생성자가 하나인 경우에는 생략 가능
     public SpringConfig(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
-    //22강
+    // 22강
     /*private EntityManager em;
 
     @Autowired
@@ -37,7 +37,7 @@ public class SpringConfig {
     }
     */
 
-    @Bean //2.으로 스프링이 처음 뜰 때,@Configuration을 읽고 스프링에 등록하라는 뜻이네? 하고 인식을 해서 이 로직을 호출해서 스프링 빈에 넣어줌.
+    @Bean // 2.으로 스프링이 처음 뜰 때,@Configuration을 읽고 스프링에 등록하라는 뜻이네? 하고 인식을 해서 이 로직을 호출해서 스프링 빈에 넣어줌.
     public MemberService memberService(){
         return new MemberService(memberRepository);//그러면 MemberService가 스프링 빈에 등록이 됨.
     }
