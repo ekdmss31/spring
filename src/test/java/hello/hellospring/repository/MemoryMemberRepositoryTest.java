@@ -28,17 +28,17 @@ class MemoryMemberRepositoryTest {
 
         Member result = repository.findById(member.getId()).get();//findById(member.getId())는 optional값임. optional에서 값을 꺼낼 때는 get()을 이용함.
 
-        //검증해보기. 같으면 참.
+        // 검증해보기. 같으면 참.
         System.out.println("result = " + (result == member));
 
-        //글자로 계속 볼수는 없기 때문에 assert이용
-        //Assertions.assertEquals(member,result); //(기대했던값, 실제값)
-        //같으면 초록불이 뜨고, 다르면 빨간불이 뜸.
+        // 글자로 계속 볼수는 없기 때문에 assert이용
+        // Assertions.assertEquals(member,result); //(기대했던값, 실제값)
+        // 같으면 초록불이 뜨고, 다르면 빨간불이 뜸.
 
         // 요즘은 이 방법을 많이 사용함
-        //Assertions.assertThat(member).isEqualTo(result);를 alt+enter하면 아래와 같이 변함
+        // Assertions.assertThat(member).isEqualTo(result);를 alt+enter하면 아래와 같이 변함
         assertThat(member).isEqualTo(result);
-        //값이 다르면 빨간불, 같으면 초록불이 뜨게 함.
+        // 값이 다르면 빨간불, 같으면 초록불이 뜨게 함.
     }
 
     //이름으로 찾기도 test 해봐야 함
